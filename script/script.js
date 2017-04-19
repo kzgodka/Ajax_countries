@@ -11,9 +11,8 @@ function searchCountries() {
 	$.ajax({
 		url: mainUrl + 'name/' + countryName,
 		method: 'GET',
-		success: showCountriesList
-	},
-	error: function (jqXHR, exception) {
+		success: showCountriesList,
+        error: function (jqXHR, exception) {
             console.log(jqXHR);
             getErrorMessage(jqXHR, exception);
 		}
